@@ -12,6 +12,8 @@
     
   //global functions
   module.init = function(){
+    module.log();
+    module.logVariables();
     logVariables();
   }
   
@@ -28,7 +30,7 @@
   //private functions 
   function logVariables(){
     console.log("globalVar", module.globalVar);
-    console.log("globalVar", moduleOne.globalVar);
+    console.log("privateToGlobal", moduleOne.privateToGlobal);
     console.log("privateVar", privateVar);
   }
 })((window.moduleOne = {}), window, document);
